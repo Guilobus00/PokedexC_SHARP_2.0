@@ -17,6 +17,7 @@ namespace PokedexC_SHARP_2._0
         public Ventana2()
         {
             InitializeComponent();
+
             dataGridView1.DataSource = miConexion.getTodosPokemons();
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;

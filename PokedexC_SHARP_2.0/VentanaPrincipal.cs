@@ -41,6 +41,7 @@ namespace PokedexC_SHARP_2._0
             if (idActual <= 0) { idActual = 1; }
 
             misPokemons = miConexion.getPokemonPorId(idActual);
+            id.Text = misPokemons.Rows[0]["id"].ToString();
             nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
             altura.Text = misPokemons.Rows[0]["altura"].ToString();
             peso.Text = misPokemons.Rows[0]["peso"].ToString();
@@ -64,6 +65,7 @@ namespace PokedexC_SHARP_2._0
             if (idActual >= 151) { idActual = 151; }
 
             misPokemons = miConexion.getPokemonPorId(idActual);
+            id.Text = misPokemons.Rows[0]["id"].ToString();
             nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
             altura.Text = misPokemons.Rows[0]["altura"].ToString();
             peso.Text = misPokemons.Rows[0]["peso"].ToString();
@@ -100,6 +102,33 @@ namespace PokedexC_SHARP_2._0
         {
             Ventana2 v = new Ventana2();
             v.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            VentanaSeleccionPokemon eligePokemon = new VentanaSeleccionPokemon();
+            eligePokemon.ShowDialog();
+            idActual = eligePokemon.idSeleccionado;
+
+            MessageBox.Show(eligePokemon.idSeleccionado.ToString());
+
+            misPokemons = miConexion.getPokemonPorId(eligePokemon.idSeleccionado);
+            id.Text = misPokemons.Rows[0]["id"].ToString();
+            nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
+            altura.Text = misPokemons.Rows[0]["altura"].ToString();
+            peso.Text = misPokemons.Rows[0]["peso"].ToString();
+            especie.Text = misPokemons.Rows[0]["especie"].ToString();
+            habitat.Text = misPokemons.Rows[0]["habitat"].ToString();
+            tipo1.Text = misPokemons.Rows[0]["tipo1"].ToString();
+            tipo2.Text = misPokemons.Rows[0]["tipo2"].ToString();
+            habilidad.Text = misPokemons.Rows[0]["habilidad"].ToString();
+            movimiento1.Text = misPokemons.Rows[0]["movimiento1"].ToString();
+            movimiento2.Text = misPokemons.Rows[0]["movimiento2"].ToString();
+            movimiento3.Text = misPokemons.Rows[0]["movimiento3"].ToString();
+            movimiento4.Text = misPokemons.Rows[0]["movimiento4"].ToString();
+            descripcion.Text = misPokemons.Rows[0]["descripcion"].ToString();
+
+            pictureBox1.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
         }
     }
 }

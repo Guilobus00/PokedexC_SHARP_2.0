@@ -47,6 +47,7 @@
             // 
             // fotoPokemon2
             // 
+            this.fotoPokemon2.BackColor = System.Drawing.Color.White;
             this.fotoPokemon2.Location = new System.Drawing.Point(12, 13);
             this.fotoPokemon2.Name = "fotoPokemon2";
             this.fotoPokemon2.Size = new System.Drawing.Size(186, 175);
@@ -68,6 +69,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(810, 406);
             this.Controls.Add(this.nombrePokemon);
             this.Controls.Add(this.fotoPokemon2);

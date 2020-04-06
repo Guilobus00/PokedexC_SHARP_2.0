@@ -54,11 +54,14 @@
             this.descripcion = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.id = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(260, 252);
@@ -296,19 +299,43 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(417, 280);
+            this.button1.Location = new System.Drawing.Point(523, 280);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(206, 50);
             this.button1.TabIndex = 25;
-            this.button1.Text = "Buscador de Pokemons";
+            this.button1.Text = "Todos los Pokemons";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(294, 280);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(206, 50);
+            this.button2.TabIndex = 26;
+            this.button2.Text = "Selecciona Pokemons";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // id
+            // 
+            this.id.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.id.Location = new System.Drawing.Point(104, 15);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(77, 23);
+            this.id.TabIndex = 27;
+            this.id.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // VentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(776, 421);
+            this.Controls.Add(this.id);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.descripcion);
@@ -372,6 +399,8 @@
         private System.Windows.Forms.Label descripcion;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label id;
     }
 }
 
